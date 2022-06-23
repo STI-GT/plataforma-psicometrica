@@ -1,0 +1,108 @@
+/*Paleta de colores preferida
+CHILD CARE
+#FDE7EA
+#FDEFDA
+
+JUICY PEACH
+#FFC2C2
+#FFD7A8
+*/
+
+/*
+Elementos de la barra de navegacion
+*/
+
+@font-face {
+	font-family: geo-sanslight;
+	src: require('geosansLight.ttf');
+}
+
+* {
+	/* font-family: Georgia, 'Times New Roman', Times, serif; */
+	font-family: geo-sanslight;
+	font-size: x-large;
+}
+
+body {
+	background-color: #025e73;
+}
+
+.barra-navegacion {
+	background: linear-gradient(45deg, #011f26 60%, #026873);
+	min-height: fit-content;
+	width: 100%; /*Ocupa todo el espacio posible horizontalmente*/
+	display: flex; /*flexbox model*/
+	flex-direction: row; /*Orientacion principal: izquierda-derecha*/
+	justify-content: space-between; /*distribuye el espacio en medio de los elementos en el axis principal*/
+	flex-wrap: wrap; /*agrupa los elementos de manera que quepan cuando no hay espacio*/
+	align-content: space-between; /*indica a flex-wrap como acomodar los elementos*/
+	padding: 20px 0 20px 0; /*clock-wise empezando por 12 horas*/
+}
+
+/*Cambiar el display por defecto de los ul y li*/
+
+.navegacion-pagina {
+	padding: 10px 0 10px 0; /*clock-wise empezando por 12 horas*/
+	margin: 0 10% 0 10%; /*clock-wise empezando por 12 horas*/
+	display: inline-flex; /*Los elementos de una lista son de tipo block por defecto*/
+	flex-direction: row;
+	justify-content: space-around; /*Centra el contenido en el eje X*/
+	align-items: center; /*Centra el contenido en el eje Y*/
+	flex: 2 1; /* Tres valores: flex-grow | flex-shrink | flex-basis */
+}
+
+.navegacion-cuenta {
+	padding: 10px 0 10px 0; /*clock-wise empezando por 12 horas*/
+	margin: 0 10% 0 10%; /*clock-wise empezando por 12 horas*/
+	display: inline-flex; /*Los elementos de una lista son de tipo block por defecto*/
+	flex-direction: row;
+	justify-content: space-around; /*Centra el contenido en el eje X*/
+	align-items: center; /*Centra el contenido en el eje Y*/
+	flex: 1 2; /* Tres valores: flex-grow | flex-shrink | flex-basis */
+}
+
+/*Remover los estilos de los enlaces de navegacion en forma de lista*/
+.enlace-navegacion {
+	list-style-type: none;
+	min-width: 150px;
+	max-width: 250px;
+	min-height: 100%;
+	max-height: 100%;
+	list-style-type: none;
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.btn {
+	width: 100%;
+	flex: 1;
+	height: 3rem;
+}
+
+/*
+Elementos del pie de pagina
+*/
+
+footer {
+	width: 100%;
+	position: relative;
+	bottom: 0;
+}
+
+img:nth-of-type(1) {
+	display: inline;
+	filter: invert(51%) sepia(55%) saturate(1159%) hue-rotate(308deg) brightness(101%) contrast(90%);
+}
+img:nth-of-type(2) {
+	filter: invert(26%) sepia(43%) saturate(1895%) hue-rotate(157deg) brightness(91%) contrast(98%);
+}
+img:nth-of-type(3) {
+	display: inline;
+	filter: invert(41%) sepia(97%) saturate(918%) hue-rotate(136deg) brightness(89%) contrast(98%);
+}
+
+span {
+	color: #fff;
+}
