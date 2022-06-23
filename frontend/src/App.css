@@ -15,6 +15,7 @@ Elementos de la barra de navegacion
 @font-face {
 	font-family: geo-sanslight;
 	src: require('geosansLight.ttf');
+	src: require('geosansLight-Oblique.ttf');
 }
 
 * {
