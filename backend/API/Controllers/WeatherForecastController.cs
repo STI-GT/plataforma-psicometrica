@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -28,5 +29,18 @@ public class WeatherForecastController : ControllerBase
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
         .ToArray();
+    }
+
+    [Authorize]
+    [HttpGet("{id}")]
+    public ActionResult<WeatherForecast> GetForecast(){
+
+        WeatherForecast wt =  new WeatherForecast{
+            Date = DateTime.Now,
+            TemperatureC = 20,
+            Summary = Summaries[2]
+        };
+        
+        return wt;
     }
 }

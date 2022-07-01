@@ -17,6 +17,7 @@ Para iniciar los servidores de desarrollo, se recomienda utilizar las terminales
 |   | System.IdentityModel.Tokens.Jwt|
 |   | Mysql.Data|
 |   | Mysql.EntityFrameworkCore|
+|   | Microsoft.IdentityModel.Tokens|
 | Domain | Microsoft.AspNetCore.Identity.EntityFrameworkCore|
 | Persistence | Microsoft.AspNetCore.Identity.EntityFrameworkCore|
 |   | Microsoft.EntityFrameworkCore| 
