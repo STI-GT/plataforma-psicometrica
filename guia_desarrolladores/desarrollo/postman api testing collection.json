@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "00e8662c-b777-4998-8f75-4f08d83c2488",
+		"name": "PsycologyUnit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19174395"
+	},
+	"item": [
+		{
+			"name": "Basic API test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://oddbbsrv01:7001/weatherForecast",
+					"protocol": "http",
+					"host": [
+						"oddbbsrv01"
+					],
+					"port": "7001",
+					"path": [
+						"weatherForecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCandidates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{httpsurl}}/api/candidates/",
+					"host": [
+						"{{httpsurl}}"
+					],
+					"path": [
+						"api",
+						"candidates",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Candidate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{httpurl}}/api/candidates/141ce4d8-688e-48d8-afc4-524dd563da44",
+					"host": [
+						"{{httpurl}}"
+					],
+					"path": [
+						"api",
+						"candidates",
+						"141ce4d8-688e-48d8-afc4-524dd563da44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCandidate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": \"{{$guid}}\",\r\n\t\"name\": \"Mercedes\",\r\n\t\"lastNAme\": \"Meza\"\r\n}"
+				},
+				"url": {
+					"raw": "{{httpsurl}}/api/candidates/",
+					"host": [
+						"{{httpsurl}}"
+					],
+					"path": [
+						"api",
+						"candidates",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Candidate",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Giovani David\",\r\n\t\"lastName\": \"Meza Bran\"\r\n}"
+				},
+				"url": {
+					"raw": "{{httpurl}}/api/candidates/141ce4d8-688e-48d8-afc4-524dd563da44",
+					"host": [
+						"{{httpurl}}"
+					],
+					"path": [
+						"api",
+						"candidates",
+						"141ce4d8-688e-48d8-afc4-524dd563da44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Candidate",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{httpsurl}}/api/candidates/7fc41da8-bfc2-4977-a87c-1724bc730743",
+					"host": [
+						"{{httpsurl}}"
+					],
+					"path": [
+						"api",
+						"candidates",
+						"7fc41da8-bfc2-4977-a87c-1724bc730743"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evaluator Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"gmeza@ppi.com\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://oddbbsrv01:7001/api/account/Login",
+					"protocol": "http",
+					"host": [
+						"oddbbsrv01"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"account",
+						"Login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Evaluator Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"gmeza@ppi.com\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://oddbbsrv01:7001/api/account/Login",
+							"protocol": "http",
+							"host": [
+								"oddbbsrv01"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"account",
+								"Login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 01 Jul 2022 02:06:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"evaluador\": {\n        \"cui\": \"1515112151515\",\n        \"nombre\": \"Giovani\",\n        \"apellido\": \"Meza\",\n        \"sexo\": \"M\",\n        \"id\": \"86a24af8-a9fa-4cc3-ac75-c45e97972315\",\n        \"userName\": \"gmeza\",\n        \"normalizedUserName\": \"GMEZA\",\n        \"email\": \"gmeza@ppi.com\",\n        \"normalizedEmail\": \"GMEZA@PPI.COM\",\n        \"emailConfirmed\": false,\n        \"passwordHash\": \"AQAAAAEAACcQAAAAEIpcn1tUSsYiAVruzpAcI1ByEl5Q5+Zptby8rIRzZhneKGVEVOR3iyDiqKc+cJQiPQ==\",\n        \"securityStamp\": \"2TODXLP2RPRQP2K4MFO4UIHLDIRKHQWD\",\n        \"concurrencyStamp\": \"77b1e220-aa8d-4950-9b9a-92a70d927036\",\n        \"phoneNumber\": null,\n        \"phoneNumberConfirmed\": false,\n        \"twoFactorEnabled\": false,\n        \"lockoutEnd\": null,\n        \"lockoutEnabled\": true,\n        \"accessFailedCount\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImdtZXphIiwibmFtZWlkIjoiODZhMjRhZjgtYTlmYS00Y2MzLWFjNzUtYzQ1ZTk3OTcyMzE1IiwiZW1haWwiOiJnbWV6YUBwcGkuY29tIiwibmJmIjoxNjU2NjQxMDg5LCJleHAiOjE2NTY4MTM4ODUsImlhdCI6MTY1NjY0MTA4OX0.KYijcOcsuKDuGPR0FHN_a_uBzD5Y7yDq4PL_KrCe325LKteSdIBBl5CsXjRoV4I8_tUlLWQWmmHiilePNAcVbw\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "httpurl",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "httpsurl",
+			"value": "https://localhost:5001",
+			"type": "string"
+		}
+	]
+}
