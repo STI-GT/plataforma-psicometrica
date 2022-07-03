@@ -1,27 +1,46 @@
 import React, { Fragment } from 'react';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
-function BarraNavegacion() {
+interface props {
+	encabezado: string | undefined;
+}
+
+function BarraNavegacion({ encabezado }: props) {
 	return (
-		<nav className="barra-navegacion">
+		<nav
+			className="barra-navegacion"
+			style={{
+				background: `${encabezado}`
+			}}
+		>
 			<ul className="navegacion-pagina">
 				<li className="enlace-navegacion">
-					<Button className="btn">Pagina principal PPI</Button>
+					<Link className="item-navegacion" to={'/'}>
+						Pagina principal PPI
+					</Link>
 				</li>
 				<li className="enlace-navegacion">
-					<Button className="btn">Nuestros servicios</Button>
+					<Link className="" to={'/Servicios'}>
+						Nuestros servicios
+					</Link>
 				</li>
 				<li className="enlace-navegacion">
-					<Button className="btn">Nuestras pruebas</Button>
+					<Link className="" to={'/Pruebas'}>
+						Nuestras pruebas
+					</Link>
 				</li>
 			</ul>
 
 			<ul className="navegacion-cuenta">
 				<li className="enlace-navegacion">
-					<Button className="btn">Inicio de candidatos</Button>
+					<Link className="" to={'/InicioSesion'}>
+						Inicio de candidatos
+					</Link>
 				</li>
 				<li className="enlace-navegacion">
-					<Button className="btn">Inicio de administradores</Button>
+					<Link className="" to={'/InicioSesion'}>
+						Inicio de administradores
+					</Link>
 				</li>
 			</ul>
 		</nav>
