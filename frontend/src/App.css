@@ -101,6 +101,13 @@ footer {
 	position: relative;
 	bottom: 0;
 }
+.barra-navegacion-pie {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
 .navegacion-pie {
 	display: inline-flex;
 	flex-direction: column;
@@ -110,16 +117,13 @@ footer {
 }
 
 .navegacion-pie .enlace-navegacion {
-	justify-content: center;
-	min-width: max-content;
+	display: inline-flex;
+	justify-content: space-evenly;
+	min-width: 300px; /*El navegador no reconoce el 33%*/
 }
 
-.barra-navegacion-pie {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
+.enlace-navegacion img {
+	width: 33px;
 }
 /*Estilos de imagenes*/
 img {
@@ -134,7 +138,7 @@ img {
 		display: flex; /*flexbox model*/
 		flex-direction: column; /*Orientacion principal: izquierda-derecha*/
 		justify-content: space-between; /*distribuye el espacio en medio de los elementos en el axis principal*/
-		flex-wrap: wrap-reverse; /*agrupa los elementos de manera que quepan cuando no hay espacio*/
+		flex-wrap: wrap; /*agrupa los elementos de manera que quepan cuando no hay espacio*/
 		align-content: space-around; /*indica a flex-wrap como acomodar los elementos*/
 		padding: 5% 0 5% 0; /*clock-wise empezando por 12 horas*/
 	}
@@ -159,7 +163,7 @@ img {
 
 	.barra-navegacion-pie {
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		justify-content: space-around;
 		align-items: center;
 		flex-wrap: wrap;
