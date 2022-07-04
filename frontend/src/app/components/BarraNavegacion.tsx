@@ -29,18 +29,19 @@ function BarraNavegacion({ encabezado }: props) {
 						Nuestras pruebas
 					</Link>
 				</li>
-			</ul>
-
-			<ul className="navegacion-cuenta">
 				<li className="enlace-navegacion">
-					<Link className="" to={'/InicioSesion'}>
-						Inicio de candidatos
+					<Link className="" to={'/Pruebas'}>
+						Industrias cubiertas
 					</Link>
 				</li>
 				<li className="enlace-navegacion">
 					<Link className="" to={'/InicioSesion'}>
-						Inicio de administradores
+						Inicio de sesion
 					</Link>
+				</li>
+				<li className="enlace-navegacion">
+					Español
+					<img src="/assets/flags/es_gt.svg" alt="es_gt" />
 				</li>
 			</ul>
 		</nav>

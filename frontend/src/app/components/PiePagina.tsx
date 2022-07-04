@@ -14,41 +14,50 @@ function PiePagina({ pie }: props) {
 		>
 			<ul className="navegacion-pie">
 				<li className="enlace-navegacion">
-					<Link className="" to={'/Nosotros'}>
+					<Link className="" to={'/'}>
 						Plataforma Psicometrica Integral
 					</Link>
 				</li>
 				<li className="enlace-navegacion">
-					<Link className="" to={'/T&C'}>
-						Terminos y condiciones
+					<Link className="" to={'/Nosotros'}>
+						Acerca de
+					</Link>
+				</li>
+				<li className="enlace-navegacion copy">&copy; 2022</li>
+			</ul>
+
+			<ul className="navegacion-pie">
+				<li className="enlace-navegacion">
+					<Link className="" to={'/Privacidad'}>
+						Aviso de privacidad
 					</Link>
 				</li>
 				<li className="enlace-navegacion">
-					<Link className="" to={'/Privacidad'}>
+					<Link className="enlace-navegacion" to={'/Privacidad'}>
 						Acuerdo de privacidad
+					</Link>
+				</li>
+				<li className="enlace-navegacion">
+					<Link className="enlace-navegacion" to={'/Privacidad'}>
+						Terminos de uso
 					</Link>
 				</li>
 			</ul>
 
 			<ul className="navegacion-pie">
 				<li className="enlace-navegacion">
-					<Link className="" to={'/Contacto'}>
+					<Link className="enlace-navegacion" to={'/Contacto'}>
 						Contacto
 					</Link>
 				</li>
 				<li className="enlace-navegacion">
-					<Link className="" to={'/API'}>
-						Instagram
+					<Link className="enlace-navegacion" to={'/API'}>
+						<img src="/assets/media/instagram.svg" alt="instagram link" />
 					</Link>
 				</li>
 				<li className="enlace-navegacion">
-					<Link className="" to={'/API'}>
-						Facebook
-					</Link>
-				</li>
-				<li className="enlace-navegacion">
-					<Link className="" to={'/API'}>
-						copyright
+					<Link className="enlace-navegacion" to={'/API'}>
+						<img src="/assets/media/facebook.svg" alt="facebook link" />
 					</Link>
 				</li>
 			</ul>
